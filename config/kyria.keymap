@@ -37,7 +37,7 @@
     &none   &kp Q         &mt LC(W) W   &kp E       &mt LC(R) R   	&mt LC(T) T                       		/**/                                    &kp Y       &mt LC(U) U	  	&mt LC(I) I &mt LC(O) O &kp P       &none
     &none   &mt LC(A) A   &mt LC(S) S   &mt LSHFT D	&mt LCTRL F		&kp G                               	/**/                                    &kp H       &mt LCTRL J		&mt LSHFT K	&kp L      	&kp SQT    	&none
     &none   &mt LC(Z) Z   &mt LC(X) X   &mt LC(C) C &mt LC(V) V   	&mt LC(B) B	&none       &kp C_VOL_DN  	/**/	&kp C_VOL_UP    &none    		&mt LC(N) N &kp M           &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
-                                    	&kp C_PP    &kp TAB         &mo NUM		kp SPACE	&mo NAV 		/**/    &mo FUN         &mt LSHFT BSPC  &lt SYM DEL	&kp ENTER       &kp C_MUTE
+                                    	&kp C_PP    &kp TAB         &mo NUM		&kp SPACE	&mo NAV 		/**/    &mo FUN         &mt LSHFT BSPC  &lt SYM DEL	&kp ENTER       &kp C_MUTE
                         >;
             };
 	};
