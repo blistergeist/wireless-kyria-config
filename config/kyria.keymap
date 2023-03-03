@@ -80,6 +80,30 @@
             bindings = <&kp RPAR>;
             layers = <QWERTY NUM NAV SYM FUN>;
         };
+		combo_lbkt {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp LBKT>;
+            layers = <QWERTY NUM NAV SYM FUN>;
+        };
+        combo_rbkt {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp RBKT>;
+            layers = <QWERTY NUM NAV SYM FUN>;
+        };
+		combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp LBRC>;
+            layers = <QWERTY NUM NAV SYM FUN>;
+        };
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp RBRC>;
+            layers = <QWERTY NUM NAV SYM FUN>;
+        };
     };
 
 	keymap {
