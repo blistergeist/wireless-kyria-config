@@ -21,26 +21,6 @@
 #define ADJUST 10
 
 / {
-	behaviors {
-        mt_s: ctrl_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MODTAP_SHORT";
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-        mt_l: alt_gui {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MODTAP_LONG";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -54,10 +34,10 @@
 	//                              |     |    |    |  |    | BSP| DEL |
 
         bindings = <
-    &none   &kp Q           &mt_l LC(W) W   &kp E           &mt_l LC(R) R   &mt_l LC(T) T                       		/**/                                    &kp Y           &mt_l LC(U) U   &mt_l LC(I) I   &mt_l LC(O) O   &kp P       &none
-    &none   &mt_l LC(A) A   &mt_l LC(S) S   &mt_s LSHFT D   &mt_s LCTRL F   &kp G                               		/**/                                    &kp H           &mt_s LCTRL J   &mt_s LSHFT K   &kp L           &kp SQT    	&none
-    &none   &mt_l LC(Z) Z   &mt_l LC(X) X   &mt_l LC(C) C   &mt_l LC(V) V   &mt_l LC(B) B   &none       &kp C_VOL_DN  	/**/    &kp C_VOL_UP    &none    		&mt_l LC(N) N   &kp M           &kp COMMA       &kp DOT         &kp FSLH    &kp CAPS
-                                            &kp C_PP        &kp TAB         &mo NUM         &kp SPACE   &mo NAV 		/**/    &mo FUN         &mt LSHFT BSPC  &lt SYM DEL     &kp ENTER       &kp C_MUTE
+    &none   &kp Q         &mt LC(W) W   &kp E       &mt LC(R) R   	&mt LC(T) T                       		/**/                                    &kp Y       &mt LC(U) U	  	&mt LC(I) I &mt LC(O) O &kp P       &none
+    &none   &mt LC(A) A   &mt LC(S) S   &mt LSHFT D	&mt LCTRL F		&kp G                               	/**/                                    &kp H       &mt LCTRL J		&mt LSHFT K	&kp L      	&kp SQT    	&none
+    &none   &mt LC(Z) Z   &mt LC(X) X   &mt LC(C) C &mt LC(V) V   	&mt LC(B) B	&none       &kp C_VOL_DN  	/**/	&kp C_VOL_UP    &none    		&mt LC(N) N &kp M           &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
+                                    	&kp C_PP    &kp TAB         &mo NUM		kp SPACE	&mo NAV 		/**/    &mo FUN         &mt LSHFT BSPC  &lt SYM DEL	&kp ENTER       &kp C_MUTE
                         >;
             };
 	};
