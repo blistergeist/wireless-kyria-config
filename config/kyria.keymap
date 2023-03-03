@@ -76,7 +76,7 @@
         };
         combo_rpar {
             timeout-ms = <50>;
-            key-positions = <31 32>;
+            key-positions = <35 36>;
             bindings = <&kp RPAR>;
             layers = <QWERTY NUM NAV SYM FUN>;
         };
@@ -88,7 +88,7 @@
         };
         combo_rbkt {
             timeout-ms = <50>;
-            key-positions = <32 33>;
+            key-positions = <36 37>;
             bindings = <&kp RBKT>;
             layers = <QWERTY NUM NAV SYM FUN>;
         };
@@ -100,7 +100,7 @@
         };
         combo_rbrc {
             timeout-ms = <50>;
-            key-positions = <33 34>;
+            key-positions = <37 38>;
             bindings = <&kp RBRC>;
             layers = <QWERTY NUM NAV SYM FUN>;
         };
