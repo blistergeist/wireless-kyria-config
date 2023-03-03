@@ -27,12 +27,13 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
+            layers = <QWERTY>;
         };
 		combo_semi {
-             timeout-ms = <50>;
-             key-positions = <21 22>;
-             bindings = <&kp SEMI>;
-             layers = <QWERTY>;
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp SEMI>;
+            layers = <QWERTY>;
 		};
 		combo_gui_l {
             timeout-ms = <50>;
@@ -44,19 +45,19 @@
             timeout-ms = <50>;
             key-positions = <29 30>;
             bindings = <&kp PSCRN>;
-            layers = <QWERTY COLEMAK NUM NAV SYM FUN>;
+            layers = <QWERTY NUM NAV SYM FUN>;
         };
 		combo_lpar {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp LPAR>;
-            layers = <QWERTY COLEMAK NUM NAV SYM FUN>;
+            layers = <QWERTY NUM NAV SYM FUN>;
         };
         combo_rpar {
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&kp RPAR>;
-            layers = <QWERTY COLEMAK NUM NAV SYM FUN>;
+            layers = <QWERTY NUM NAV SYM FUN>;
         };
     };
 
@@ -167,7 +168,7 @@
 	// -----------------------------------------------  -----------------------------------------------
 	// | CTRL|  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U  |  I  |  O  |  P  | BSPC|
 	// | ALT |  A  |  S  |  D  |  F  |  G  |                      |  H  |  J  |  K  |  L  |  ;  |  '  |
-	// |  @  |  Z  |  X  |  C  |  V  |  B  |    |    |  |    |    |  N  |  M  |  ,  |  .  |  /  | CAPS|
+	// |  `  |  Z  |  X  |  C  |  V  |  B  |    |    |  |    |    |  N  |  M  |  ,  |  .  |  /  | CAPS|
 	//                   |SHIFT| MNRS|SPACE|    |    |  |    |    |LSHFT| XXX |ENTER|
 
         bindings = <
