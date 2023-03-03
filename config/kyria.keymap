@@ -9,16 +9,15 @@
 
 //Layer definitions
 #define QWERTY 0
-#define COLEMAK 1
-#define NUM 2
-#define NAV 3
-#define SYM 4
-#define FUN 5
-#define AOE 6
-#define AOERAISE 7
-#define GAME 8
-#define GAMERAISE 9
-#define ADJUST 10
+#define NUM 1
+#define NAV 2
+#define SYM 3
+#define FUN 4
+#define AOE 5
+#define AOERAISE 6
+#define GAME 7
+#define GAMERAISE 8
+#define ADJUST 9
 
 / {
 	keymap {
@@ -38,6 +37,21 @@
     &none   &mt LC(A) A   &mt LC(S) S   &mt LSHFT D	&mt LCTRL F		&kp G                               	/**/                                    &kp H       &mt LCTRL J		&mt LSHFT K	&kp L      	&kp SQT    	&none
     &none   &mt LC(Z) Z   &mt LC(X) X   &mt LC(C) C &mt LC(V) V   	&mt LC(B) B	&none       &kp C_VOL_DN  	/**/	&kp C_VOL_UP    &none    		&mt LC(N) N &kp M           &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
                                     	&kp C_PP    &kp TAB         &mo NUM		&kp SPACE	&mo NAV 		/**/    &mo FUN         &mt LSHFT BSPC  &lt SYM DEL	&kp ENTER       &kp C_MUTE
+                        >;
+            };
+			
+		num {
+	// ----------------------------------------------------  --------------------------------------------------------
+	// |       |     |     |      |      |      |                      |  +   |  7    |  8    |  9   |   *   |      |
+	// |       |     |     |      |      |      |                      |  =   |  4    |  5    |  6   |   |   |      |
+	// |       |     |     |      |      |      |    |    |  |    |    |  -   |  1    |  2    |  3   |   \   |      |
+	//                     |      |      |      |    |    |  |  - |  0 | ADJ/.|       |       |
+
+        bindings = <
+    &none   &none   &none   &none       &none       &none                   /**/                    &kp PLUS       	&kp N7  &kp N8  &kp N9  &kp STAR    &none
+    &none   &none   &none   &kp LSHFT   &kp LCTRL   &none                   /**/                    &kp MINUS       &kp N4  &kp N5  &kp N6  &kp PIPE    &none
+    &none   &none   &none   &none       &none       &none   &none   &none   /**/    &none   &none   &kp EQUAL      	&kp N1  &kp N2  &kp N3  &kp BSLH    &none
+                            &none       &trans      &none   &none   &none   /**/    &none	&kp N0  &lt ADJUST DOT  &none   &none
                         >;
             };
 	};
