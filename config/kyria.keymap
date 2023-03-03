@@ -21,6 +21,45 @@
 #define ADJUST 9
 
 / {
+  	combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp ESC>;
+        };
+		combo_semi {
+             timeout-ms = <50>;
+             key-positions = <21 22>;
+             bindings = <&kp SEMI>;
+             layers = <QWERTY>;
+		};
+		combo_gui_l {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp LGUI>;
+            layers = <QWERTY NUM NAV SYM FUN>;
+        };
+		combo_prsc {
+            timeout-ms = <50>;
+            key-positions = <29 30>;
+            bindings = <&kp PSCRN>;
+            layers = <QWERTY COLEMAK NUM NAV SYM FUN>;
+        };
+		combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp LPAR>;
+            layers = <QWERTY COLEMAK NUM NAV SYM FUN>;
+        };
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp RPAR>;
+            layers = <QWERTY COLEMAK NUM NAV SYM FUN>;
+        };
+    };
+
 	keymap {
 		compatible = "zmk,keymap";
 
