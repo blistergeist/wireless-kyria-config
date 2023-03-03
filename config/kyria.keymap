@@ -20,11 +20,27 @@
 #define GAMERAISE 8
 #define ADJUST 9
 
-&mt {
-		tapping-term-ms = <500>;
-	};
 
 / {
+	behaviors {
+        mt_s: ctrl_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MODTAP_SHORT";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        mt_l: alt_gui {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MODTAP_LONG";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
   	combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -78,10 +94,10 @@
 	//                              |     |    |    |  |    | BSP| DEL |
 
         bindings = <
-    &none   &kp Q         &mt LC(W) W   &kp E       &mt LC(R) R   	&mt LC(T) T                     	  		/**/                                    &kp Y       &mt LC(U) U	  	&mt LC(I) I &mt LC(O) O &kp P       &none
-    &none   &mt LC(A) A   &mt LALT S   	&mt LSHFT D	&mt LCTRL F		&kp G                       	        	/**/                                    &kp H       &mt LCTRL J		&mt LSHFT K	&kp L      	&kp SQT    	&none
-    &none   &mt LC(Z) Z   &mt LC(X) X   &mt LC(C) C &mt LC(V) V   	&mt LC(B) B	&none       	&kp C_VOL_DN  	/**/	&kp C_VOL_UP    &none    		&mt LC(N) N &kp M           &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
-                                    	&kp C_PP    &kp TAB         &mo NUM		&mt LSHFT SPACE	&mo NAV 		/**/    &mo FUN         &mt LSHFT BSPC  &lt SYM DEL	&kp ENTER       &kp C_MUTE
+    &none   &kp Q         &mt_s LC(W) W   &kp E       &mt_s LC(R) R   	&mt_s LC(T) T                     	  		/**/                                    &kp Y       &mt_s LC(U) U	  	&mt_s LC(I) I &mt_s LC(O) O &kp P       &none
+    &none   &mt_s LC(A) A   &mt_s LALT S   	&mt_s LSHFT D	&mt_s LCTRL F		&kp G                       	        	/**/                                    &kp H       &mt_s LCTRL J		&mt_s LSHFT K	&kp L      	&kp SQT    	&none
+    &none   &mt_s LC(Z) Z   &mt_s LC(X) X   &mt_s LC(C) C &mt_s LC(V) V   	&mt_s LC(B) B	&none       	&kp C_VOL_DN  	/**/	&kp C_VOL_UP    &none    		&mt_s LC(N) N &kp M           &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
+                                    	&kp C_PP    &kp TAB         &mo NUM		&mt_s LSHFT SPACE	&mo NAV 		/**/    &mo FUN         &mt_s LSHFT BSPC  &lt SYM DEL	&kp ENTER       &kp C_MUTE
                         >;
         };
 		num {
@@ -151,7 +167,7 @@
     &kp LCTRL   &kp Q   &kp W   &kp E   &kp R   &kp T                                       /**/                            &kp Y   &kp U       &kp I       &kp O   &kp P       &kp BSPC
     &kp LALT    &kp A   &kp S   &kp D   &kp F   &kp G                                       /**/                            &kp H   &kp J       &kp K       &kp L   &kp SEMI    &kp SQT
     &kp H       &kp Z   &kp X   &kp C   &kp V   &kp B               &kp F7      &kp F8      /**/    &none   &none           &kp N   &kp M       &kp COMMA   &kp DOT &kp FSLH    &kp CAPS
-                                &none   &kp TAB &lt AOERAISE ESC    &kp SPACE   &kp LSHFT   /**/    &none   &mt LSHFT BSPC  &kp DEL &kp ENTER   &none
+                                &none   &kp TAB &lt AOERAISE ESC    &kp SPACE   &kp LSHFT   /**/    &none   &mt_s LSHFT BSPC  &kp DEL &kp ENTER   &none
                     >;
         };
         aoeraise {
@@ -179,7 +195,7 @@
     &kp LCTRL   &kp Q   &kp W   &kp E       &kp R   &kp T                                       /**/                            &kp Y   &kp U       &kp I       &kp O       &kp P       &none
     &kp LALT    &kp A   &kp S   &kp D       &kp F   &kp G                                       /**/                            &kp H   &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
     &kp GRAVE	&kp Z   &kp X   &kp C       &kp V   &kp B               &kp F3      &none       /**/    &none    &none          &kp N   &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
-                        		&kp F5      &kp TAB &lt GAMERAISE ESC   &kp SPACE   &kp LSHFT   /**/    &none    &mt LSHFT BSPC &kp DEL &kp ENTER   &kp C_MUTE
+                        		&kp F5      &kp TAB &lt GAMERAISE ESC   &kp SPACE   &kp LSHFT   /**/    &none    &mt_s LSHFT BSPC &kp DEL &kp ENTER   &kp C_MUTE
                     >;
         };
         gameraise {
