@@ -38,8 +38,7 @@
     &none   &mt LC(Z) Z   &mt LC(X) X   &mt LC(C) C &mt LC(V) V   	&mt LC(B) B	&none       &kp C_VOL_DN  	/**/	&kp C_VOL_UP    &none    		&mt LC(N) N &kp M           &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
                                     	&kp C_PP    &kp TAB         &mo NUM		&kp SPACE	&mo NAV 		/**/    &mo FUN         &mt LSHFT BSPC  &lt SYM DEL	&kp ENTER       &kp C_MUTE
                         >;
-            };
-			
+        };
 		num {
 	// ----------------------------------------------------  --------------------------------------------------------
 	// |       |     |     |      |      |      |                      |  +   |  7    |  8    |  9   |   *   |      |
@@ -53,8 +52,7 @@
     &none   &none   	&none   	&none       &none       &none   &none   &none   /**/    &none   &none   &kp EQUAL      	&kp N1  &kp N2  &kp N3  &kp BSLH    &none
                             		&none       &trans      &none   &none   &none   /**/    &none	&kp N0  &lt ADJUST DOT  &none   &none
                         >;
-            };
-
+        };
 		nav {
 	// ----------------------------------------------------  --------------------------------------------------------
 	// |       |     |     |      |      |      |                      |      |   [   |   ]   |  {   |   }   |      |
@@ -68,9 +66,8 @@
     &none   &none       &none       &none       &none       &none   &none   &none   /**/    &none    &none  &none       &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none
                                     &none       &none       &trans  &none   &none   /**/    &none    &none	&mo ADJUST	&none       &none
                         >;
-            };
-
-            sym {
+        };
+        sym {
 	// ----------------------------------------------------  --------------------------------------------------------
 	// |       |  !  |  @  |  #   |  $   |  %   |                      |      |       |       |      |       |      |
 	// |       |  ^  |  &  |  _   |  `   |  ~   |                      |      |       |       |      |       |      |
@@ -83,9 +80,8 @@
     &none   &none       &none       &none       &none       &none       &none    &none  /**/    &none    &none  &none   &none       &none       &none       &none       &none
                                     &none       &none       &mo ADJUST  &none    &none  /**/    &none    &none  &trans  &none       &none
                         >;
-            };
-
-            fun {
+        };
+        fun {
 	// ----------------------------------------------------  --------------------------------------------------------
 	// |       |  F1 |  F2 |  F3  |  F4  |      |                      |      |       |       |      |       |      |
 	// |       |  F5 |  F6 |  F7  |  F8  |      |                      |      |       |       |      |       |      |
@@ -98,6 +94,76 @@
     &none   &kp F9  &kp F10 &kp F11 &kp F12 &none       &none   &none   /**/    &none    &none  &none   &none       &none       &none       &none       &none
                             &none   &none   &mo ADJUST  &none   &none   /**/    &none    &none  &trans  &none       &none
                         >;
-            };
+        };
+		aoe {
+	// -----------------------------------------------  -----------------------------------------------
+	// | CTRL|  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U  |  I  |  O  |  P  | BSPC|
+	// | ALT |  A  |  S  |  D  |  F  |  G  |                      |  H  |  J  |  K  |  L  |  ;  |  '  |
+	// |  H  |  Z  |  X  |  C  |  V  |  B  | F7 | F8 |  |    |    |  N  |  M  |  ,  |  .  |  /  | CAPS|
+	//                   |     | TAB | ESC | SPC| SFT|  |    |    |LSHFT| XXX |ENTER|
+
+        bindings = <
+    &kp LCTRL   &kp Q   &kp W   &kp E   &kp R   &kp T                                       /**/                            &kp Y   &kp U       &kp I       &kp O   &kp P       &kp BSPC
+    &kp LALT    &kp A   &kp S   &kp D   &kp F   &kp G                                       /**/                            &kp H   &kp J       &kp K       &kp L   &kp SEMI    &kp SQT
+    &kp H       &kp Z   &kp X   &kp C   &kp V   &kp B               &kp F7      &kp F8      /**/    &none   &none           &kp N   &kp M       &kp COMMA   &kp DOT &kp FSLH    &kp CAPS
+                                &none   &kp TAB &lt AOERAISE ESC    &kp SPACE   &kp LSHFT   /**/    &none   &mt LSHFT BSPC  &kp DEL &kp ENTER   &none
+                    >;
+        };
+        aoeraise {
+	// -----------------------------------------------  -----------------------------------------------
+	// |  0  |  1  |  2  |  3  |  4  |  5  |                      |     |     |     |     |     |     |
+	// |LS(0)|LS(1)|LS(2)|LS(3)|LS(4)|LS(5)|                      |     |     |     |     |     |     |
+	// | F6  |  F1 |  F2 |  F3 |  F4 |  F5 | F9 |    |  |    |    |     |     |     |     |     |     |
+	//                   |     |     |     |    |    |  |    |    |     | ADJ |     |
+
+        bindings = <
+    &kp N0      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                      /**/                    &trans      &trans  &trans  &trans  &trans  &trans
+    &kp LS(N0)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  /**/                    &trans      &trans  &trans  &trans  &trans  &trans
+    &kp F6      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F9  &none   /**/    &none   &none   &trans      &trans  &trans  &trans  &trans  &trans
+                                        &trans      &trans      &trans      &none   &none   /**/    &none   &none   &mo ADJUST  &trans  &none
+                    >;
+        };
+        game {
+	// -----------------------------------------------  -----------------------------------------------
+	// | CTRL|  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U  |  I  |  O  |  P  | BSPC|
+	// | ALT |  A  |  S  |  D  |  F  |  G  |                      |  H  |  J  |  K  |  L  |  ;  |  '  |
+	// |  @  |  Z  |  X  |  C  |  V  |  B  |    |    |  |    |    |  N  |  M  |  ,  |  .  |  /  | CAPS|
+	//                   |SHIFT| MNRS|SPACE|    |    |  |    |    |LSHFT| XXX |ENTER|
+
+        bindings = <
+    &kp LCTRL   &kp Q   &kp W   &kp E       &kp R   &kp T                                       /**/                            &kp Y   &kp U       &kp I       &kp O       &kp P       &none
+    &kp LALT    &kp A   &kp S   &kp D       &kp F   &kp G                                       /**/                            &kp H   &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
+    &kp GRAVE	&kp Z   &kp X   &kp C       &kp V   &kp B               &kp F3      &none       /**/    &none    &none          &kp N   &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp CAPS
+                        		&kp F5      &kp TAB &lt GAMERAISE ESC   &kp SPACE   &kp LSHFT   /**/    &none    &mt LSHFT BSPC &kp DEL &kp ENTER   &kp C_MUTE
+                    >;
+        };
+        gameraise {
+	// -----------------------------------------------  -----------------------------------------------
+	// |     |  1  |  2  |  3  |  4  |  5  |                      |     |     |     |     |     |     |
+	// |     |  6  |  7  |  8  |  9  |  0  |                      |     |     |     |     |     |     |
+	// |     |  F1 |  F2 |  F3 |  F4 |  F5 |    |    |  |    |    |     |     |     |     |     |     |
+	//                   |     |     |     |    |    |  |    |    |     | ADJ |     |
+
+        bindings = <
+    &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                  /**/                    &trans      &trans  &trans  &trans  &trans  &trans
+    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0                  /**/                    &trans      &trans  &trans  &trans  &trans  &trans
+    &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none   &none   /**/    &none    &none  &trans      &trans  &trans  &trans  &trans  &trans
+                            &none   &trans  &trans  &trans  &none   /**/    &none    &none  &mo ADJUST  &trans  &trans
+                    >;
+        };
+        adjust {
+	// -----------------------------------------------  -----------------------------------------------
+	// |RESET|     |     |     |     |     |                      |     |     |     |     |     |     |
+	// |     |     |BTCLR| BT1 | BT2 |SG(L)|                      |SG(R)|LG(L)|LG(D)|LG(U)|LG(R)|     |
+	// |PSCRN|     |     |     | AOE | MINE|    |    |  |    |    |COLEM|QWERT|     |     |     |     |
+	//                   |     |     |     |    |    |  |    |    |     |     |     |
+
+        bindings = <
+    &bootloader &none   	&none       &none           &none           &none                                   /**/                        &none               &none           &none           &none       &none           &none
+    &none 		&none   	&bt BT_CLR  &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(LS(LEFT))                        /**/                        &kp LG(LS(RIGHT))   &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &none
+    &none       &to GAME   	&to AOE     &none           &none         	&none            	&trans    &none     /**/    &none   &none  		&none               &none           &none           &none       &to QWERTY      &none
+                                    	&none           &trans          &trans              &trans    &trans    /**/    &trans  &trans      &trans              &trans          &none
+            >;
+        };
 	};
 };
