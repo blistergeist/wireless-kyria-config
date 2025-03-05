@@ -64,7 +64,7 @@
         };
 		combo_prsc {
             timeout-ms = <50>;
-            key-positions = <29 30>;
+            key-positions = <29 34>;
             bindings = <&kp PSCRN>;
             layers = <QWERTY NUM NAV SYM FUN>;
         };
@@ -119,10 +119,10 @@
 	//                              |     |    |    |  |    | BSP| DEL |
 
         bindings = <
-    &none   &kp Q         	&mt_l LC(W) W   &kp E       	&mt_l LC(R) R   	&mt_l LC(T) T                     	  		/**/                                    	&kp Y       	&mt_l LC(U) U	&mt_l LC(I) I 	&mt_l LC(O) O	&kp P       &none
-    &none   &mt_l LC(A) A   &mt_l LALT S   	&mt_l LSHFT D	&mt_s LCTRL F		&kp G                       	        	/**/                                    	&kp H       	&mt_s LCTRL J	&mt_l LSHFT K	&kp L      		&kp SQT    	&none
-    &none   &mt_l LC(Z) Z   &mt_l LC(X) X   &mt_l LC(C) C 	&mt_l LC(V) V   	&mt_l LC(B) B	&none       	&kp C_VOL_DN  	/**/	&kp C_VOL_UP    	&none		&mt_l LC(N) N 	&kp M  			&kp COMMA   	&kp DOT     	&kp FSLH    &kp CAPS
-                                    	&kp C_PP    &kp TAB         &mo NUM		&mt_s LSHFT SPACE	&mo NAV 		/**/    &mo FUN     &mt_s LSHFT BSPC  	&lt SYM DEL	&kp ENTER       &kp C_MUTE
+    &none   &kp Q         	&mt_l LC(W) W   &kp E       	&mt_l LC(R) R   	&mt_l LC(T) T                     	  		        /**/                                    	&kp Y       	&mt_l LC(U) U	&mt_l LC(I) I 	&mt_l LC(O) O	&kp P       &none
+    &none   &mt_l LC(A) A   &mt_l LALT S   	&mt_l LSHFT D	&mt_s LCTRL F		&kp G                       	            	    /**/                                    	&kp H       	&mt_s LCTRL J	&mt_l LSHFT K	&kp L      		&kp SQT    	&none
+    &none   &mt_l LC(Z) Z   &mt_l LC(X) X   &mt_l LC(C) C 	&mt_l LC(V) V   	&mt_l LC(B) B	&none               &kp C_VOL_DN  	/**/	&kp C_VOL_UP    &none		        &mt_l LC(N) N 	&kp M  			&kp COMMA   	&kp DOT     	&kp FSLH    &kp CAPS
+                                    	    &kp C_PP        &kp TAB             &mo NUM		    &mt_s LSHFT SPACE	&lt NAV TAB 	/**/    &lt FUN ENTER   &mt_s LSHFT BSPC  	&lt SYM DEL	    &kp ENTER       &kp C_MUTE
                         >;
         };
 		num {
